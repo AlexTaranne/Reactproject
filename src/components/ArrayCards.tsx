@@ -192,7 +192,7 @@ export default function ArrayCards() {
 
         <select onChange={handleChangeType}>
           <option value="">All</option>
-          <option value="langage">langage</option>
+          <option value="language">language</option>
           <option value="framework">framework</option>
           <option value="bibliothèque">bibliothèque</option>
           <option value="outil de versioning">outil de versioning</option>
