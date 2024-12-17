@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+:root {
+  --background-color: rgb(158, 212, 190);
+}
+
+h1 {
+  text-align: center;
+  margin: 3rem;
+  font-size: 4.5rem;
+}
+
+/* Card */
+
+.containerCard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1rem;
+  margin: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardClass {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  background-color: var(--background-color);
+  /* flex-wrap: wrap; */
+  gap: 0.8rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
+}
+
+.cardClass > img {
+  border-radius: 8px;
+  height: 10rem;
+  width: 12rem;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+/* .cardClass > button {
+  border-radius: 5rem;
+  padding: 0.4rem 0.8rem;
+  text-align: center;
+} */
+
+.cardClass > h2 {
+  font-size: 3rem;
+}
+
+.cardClass > p {
+  font-size: 1.2rem;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* bouton style  */
+button {
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #000000;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 5px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:active,
+button:hover {
+  outline: 0;
+}
+
+button span {
+  background-color: var(--background-color);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+button:hover span {
+  background: none;
+}
+
+button:active {
+  transform: scale(0.9);
+}
