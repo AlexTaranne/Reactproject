@@ -213,7 +213,6 @@ export default function ArrayCards() {
           placeholder="Cherchez un outil"
           onChange={handleChangeName}
         />
-
         <select onChange={handleChangeType}>
           <option value="">All</option>
           <option value="language">language</option>
@@ -222,17 +221,13 @@ export default function ArrayCards() {
           <option value="outil de versioning">outil de versioning</option>
           <option value="favori">favoris</option>
         </select>
-
         <p>Il y a {filteredCards.length} résultats</p>
         {filteredCards.length === 0 ? (
           <p>Aucun outil correspond à ta recherche</p>
         ) : (
           ""
         )}
-
-        <button type="button" onClick={handleClickFavori}>
-          favori
-        </button>
+        <input type="checkbox" onClick={handleClickFavori} /> <p> favoris </p>
       </section>
 
       <section className="containerCard">
