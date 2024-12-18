@@ -164,10 +164,26 @@ const CardsList = [
   },
 ];
 
+// interface CardsList {
+//   card: {
+//     id: number;
+//     categorie: string;
+//     nom: string;
+//     description: string;
+//     photo: string;
+//     favori: boolean;
+//   };
+// }
+
 export default function ArrayCards() {
   const [nom, setNom] = useState("");
   const [categorie, setCategorie] = useState("");
-  // const [favorite, setFavorite] = useState(Boolean);
+  const [favoriteShow, setFavoriteShow] = useState(false);
+
+  // const [favorite, setFavorite] = useState(card.favori);
+  // const handleClickFavorite = () => {
+  //   setFavorite(!favorite);
+  // };
 
   const handleChangeName = (event: React.ChangeEvent<HTMLInputElement>) => {
     setNom(event.currentTarget.value.toLowerCase());
@@ -177,9 +193,17 @@ export default function ArrayCards() {
     setCategorie(event.currentTarget.value);
   };
 
+  const handleClickFavori = () => {
+    setFavoriteShow(!favoriteShow);
+  };
+
   const filteredCards = CardsList.filter((card) =>
-    categorie === "" ? card : card.categorie === categorie
-  ).filter((card) => card.nom.toLowerCase().includes(nom));
+    categorie === "" ? card : card.categorie === categorie,
+  )
+    .filter((card) => card.nom.toLowerCase().includes(nom))
+    .filter((card) =>
+      favoriteShow === false ? card : card.favori === favoriteShow,
+    );
 
   return (
     <>
@@ -205,6 +229,10 @@ export default function ArrayCards() {
         ) : (
           ""
         )}
+
+        <button type="button" onClick={handleClickFavori}>
+          favori
+        </button>
       </section>
 
       <section className="containerCard">
